@@ -20,3 +20,18 @@ body {
 .card-columns {
     column-count: 3;
 }
+.x-icon {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 50px;
+    right: 5px;
+}
+
+.text-white{
+    color:whitesmoke;
+}

@@ -266,3 +266,7 @@ C:\Users\nelso\source\repos\Restaurant2\Restaurant2Web\bin\Debug\net6.0\Swashbuc
 C:\Users\nelso\source\repos\Restaurant2\Restaurant2Web\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\nelso\source\repos\Restaurant2\Restaurant2Web\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\nelso\source\repos\Restaurant2\Restaurant2Web\obj\Debug\net6.0\Restaurant2Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\nelso\source\repos\Restaurant2\Restaurant2Web\bin\Debug\net6.0\Restaurant.DataAccess.dll
+C:\Users\nelso\source\repos\Restaurant2\Restaurant2Web\bin\Debug\net6.0\Restaurant.Models.dll
+C:\Users\nelso\source\repos\Restaurant2\Restaurant2Web\bin\Debug\net6.0\Restaurant.DataAccess.pdb
+C:\Users\nelso\source\repos\Restaurant2\Restaurant2Web\bin\Debug\net6.0\Restaurant.Models.pdb

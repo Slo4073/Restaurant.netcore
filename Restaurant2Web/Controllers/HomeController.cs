@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Restaurant2Web.Models;
+using Restaurant2.Models;
 using System.Diagnostics;
 
 namespace Restaurant2Web.Controllers

@@ -2,94 +2,98 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+<partial name="_Notification"></partial>
 <div class="container p-4">
     <div class="row pt-8">
         <div class="col-9">
-             <h2 class="text-primary">Menu List</h2>
+            <h2 class="text-primary">Menu List</h2>
         </div>
         <div class="col-3">
             <a asp-controller="Menu" asp-action="Create" class="btn btn-primary">
-            <i class="bi bi-plus-lg"></i>&nbsp; Create New Menu</a>
+                <i class="bi bi-plus-lg"></i>&nbsp; Create New Menu
+            </a>
         </div>
     </div>
 </div>
 <div class="container">
-  <div class="row">
-      
-@foreach (var item in Model)
-{
-    <div class="col-sm-4">
-      <div class="card border-primary mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">@item.Name</h5>
-        <p class="card-text">@item.Description</p>
-        <p class="card-text"><small class="text-muted">@item.Price</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
- }
- </div>
- </div>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-4">
+                <div class="card border-primary mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" class="img-fluid rounded-start" alt="...">
+                        </div>
 
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">@item.Name</h5>
+                                <div class="x-icon bi bi-pencil btn btn-primary" role="group"><a asp-controller="Menu" asp-action="Edit" asp-route-id="@item.MenuId" class="text-white">Edit</a></div>
+                                <div class="delete-icon bi bi bi-trash3  btn btn-danger" role="group"><a asp-controller="Menu" asp-action="Delete" asp-route-id="@item.MenuId" class="text-white">Delete</a></div>
+                                <p class="card-text">@item.Description</p>
+                                <p class="card-text"><small class="text-muted">$ @item.Price</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<style>
+}</style>
 
 @*<div class="container">
-  <div class="row">
+    <div class="row">
     <div class="col">
-      <div class="card border-primary mb-3" style="max-width: 540px;">
-  <div class="row g-0">
+    <div class="card border-primary mb-3" style="max-width: 540px;">
+    <div class="row g-0">
     <div class="col-md-4">
-      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" class="img-fluid rounded-start" alt="...">
+    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
+    <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
-  </div>
-</div>
+    </div>
+    </div>
+    </div>
     </div>
 
     <div class="col">
-      <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
+    <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
     <div class="col-md-4">
-      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" class="img-fluid rounded-start" alt="...">
+    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
+    <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
-  </div>
-</div>
+    </div>
+    </div>
+    </div>
     </div>
     <div class="col">
-      <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
+    <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
     <div class="col-md-4">
-      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" class="img-fluid rounded-start" alt="...">
+    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
+    <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
-  </div>
-</div>
     </div>
-  </div>
-</div>*@
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>*@
